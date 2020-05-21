@@ -6,7 +6,7 @@ const compression = require('compression')
 const morgan = require('morgan')
 const router = require('./router')
 
-class ClientAPI {
+class ManagerAPI {
   constructor() {
     this.app = express()
   }
@@ -25,8 +25,8 @@ class ClientAPI {
     this.config()
     return new Promise((resolve, reject) => {
       this.app
-        .listen('3030', '0.0.0.0', () => {
-          console.log('Client API listening in port 3030')
+        .listen('4040', '0.0.0.0', () => {
+          console.log('Manager API listening in port 4040')
           resolve()
         })
         .on('error', (error) => reject(error))
@@ -34,4 +34,4 @@ class ClientAPI {
   }
 }
 
-module.exports = new ClientAPI()
+module.exports = new ManagerAPI()
