@@ -26,3 +26,24 @@ Running `npm i && npm start` will get the system running, client api in 3030 and
     "__v" : 0
 }
 ```
+
+#### Generate tokens
+
+Call `localhost:3030/auth/token` with your id and secret
+
+#### Validate tokens
+
+Call `localhost:4040/auth/token` with the id and token
+
+TODO:
+- envs
+- docker
+- token revocability
+- account creation
+- hashing algorithm selection
+- manager data model
+- add profiles
+- CRUD profiles
+- secret change
+- credentials for manager connection
+...
